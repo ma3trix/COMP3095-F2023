@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "eb493fab-c726-4ef4-b1b3-1d46c778606e",
+		"name": "Order-Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10802289"
+	},
+	"item": [
+		{
+			"name": "Place Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderLineItemDtoList\" :[\r\n        {\"skuCode\"  : \"sku_123456\",\r\n         \"price\"    :  200,\r\n         \"quantity\" :  1\r\n        },\r\n\r\n        {\"skuCode\"  : \"sku_789012\",\r\n         \"price\"    :  300,\r\n         \"quantity\" :  4\r\n        },\r\n\r\n        {\"skuCode\"  : \"sku_55555\",\r\n         \"price\"    :  1000,\r\n         \"quantity\" :  2\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
